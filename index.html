@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درزی کا آرڈر فارم</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>درزی کا مکمل آرڈر فارم</h1>
+        
+        <form id="tailorOrderForm">
+            <div class="form-section">
+                <h2>بنیادی معلومات</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="recordNumber">ریکارڈ نمبر</label>
+                        <input type="text" id="recordNumber" name="recordNumber" placeholder="خود بخود جنریٹ ہوگا" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="computerNumber">کمپیوٹر نمبر</label>
+                        <input type="text" id="computerNumber" name="computerNumber" placeholder="درج کریں">
+                    </div>
+                    <div class="form-group">
+                        <label for="entryDate">تاریخ اندراج</label>
+                        <input type="date" id="entryDate" name="entryDate" value="">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="customerName">گاہک کا نام</label>
+                        <input type="text" id="customerName" name="customerName" placeholder="مکمل نام درج کریں">
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">فون نمبر</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="03001234567" pattern="[0-9]*" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                        <!-- <div class="form-note">بغیر 0 کے نمبر درج کریں</div> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="deliveryDate">تاریخ واپسی</label>
+                        <input type="date" id="deliveryDate" name="deliveryDate" value="">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2>کپڑوں کی تفصیلات</h2>
+                
+                <h3>بنیادی آپشنز</h3>
+                <div class="form-row">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="koyBean" name="koyBean">
+                        <label for="koyBean">کف ډبل کاج</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="jacketSleeve" name="jacketSleeve">
+                        <label for="jacketSleeve">جاک استین</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="lukadarTera" name="lukadarTera">
+                        <label for="lukadarTera">لوقادار تیرا</label>
+                    </div>
+                </div>
+                
+                <h3>اضافی خصوصیات</h3>
+                <div class="checkbox-options">
+                    <label><input type="checkbox" name="option1"> غٹ بٹن</label>
+                    <label><input type="checkbox" name="option2"> کاج پٹی</label>
+                    <label><input type="checkbox" name="option3">کف پٹی</label>
+                    <label><input type="checkbox" name="option4"> بٹن پٹی</label>
+                    <label><input type="checkbox" name="option5"> بٹن 5</label>
+                    <label><input type="checkbox" name="option6"> بغیر لیبل جیب</label>
+                    <label><input type="checkbox" name="option7">جیب 2</label>
+                    <label><input type="checkbox" name="option8"> شلوار زیب</label>
+                </div>
+                
+                <h3>قمیض کی پیمائش</h3>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>ناب 1</th>
+                        <th>ناب 2</th>
+                        <th>ڈزاین نمبر</th>
+                    </tr>
+                    <tr>
+                        <th>بازو</th>
+                        <td><input type="text" id="arm1" name="arm1" placeholder="انچ"></td>
+                        <td><input type="text" id="arm2" name="arm2" placeholder="انچ"></td>
+                        <td><input type="text" id="arm3" name="arm2" placeholder="انچ"></td>
+                    </tr>
+                    <tr>
+                        <th>کف</th>
+                        <td><input type="text" id="cuff1" name="cuff1" placeholder="انچ"></td>
+                        <td><input type="text" id="cuff2" name="cuff2" placeholder="انچ"></td>
+                        <td><input type="text" id="cuff3" name="cuff2" placeholder="انچ"></td>
+                    </tr>
+                    <tr>
+                        <th>بٹن پٹی</th>
+                        <td><input type="text" id="cuffPenni1" name="cuffPenni1" placeholder="انچ"></td>
+                        <td><input type="text" id="cuffPenni2" name="cuffPenni2" placeholder="انچ"></td>
+                        <td><input type="text" id="cuffPenni3" name="cuffPenni2" placeholder="انچ"></td>
+                    </tr>
+                    <!-- <tr>
+                        <th>پنی 5</th>
+                        <td><input type="text" id="penni51" name="penni51" placeholder="انچ"></td>
+                        <td><input type="text" id="penni52" name="penni52" placeholder="انچ"></td>
+                    </tr> -->
+                    <tr>
+                        <th>جیب</th>
+                        <td><input type="text" id="pocket1" name="pocket1" placeholder="انچ"></td>
+                        <td><input type="text" id="pocket2" name="pocket2" placeholder="انچ"></td>
+                        <td><input type="text" id="pocket3" name="pocket2" placeholder="انچ"></td>
+                    </tr>
+                </table>
+                
+                <h3>دیگر پیمائشیں</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="chest">چھاتی</label>
+                        <input type="text" id="chest" name="chest" placeholder="انچ">
+                    </div>
+                    <div class="form-group">
+                        <label for="width">چوڑائی</label>
+                        <input type="text" id="width" name="width" placeholder="انچ">
+                    </div>
+                    <div class="form-group">
+                        <label for="collar">کالر</label>
+                        <select id="collar" name="collar">
+                            <option value="عام">عام</option>
+                            <option value="گول">گول</option>
+                            <option value="کردہ">کردہ</option>
+                            <option value="ہاف بین">ہاف بین</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="waist">کمر</label>
+                        <input type="text" id="waist" name="waist" placeholder="انچ">
+                    </div>
+                    <div class="form-group">
+                        <label for="hem">دامن</label>
+                        <input type="text" id="daman" name="daman" placeholder="انچ">
+                    </div>
+                    <div class="form-group">
+                        <label for="pantLength">شلوار لمبائی</label>
+                        <input type="text" id="pantLength" name="pantLength" placeholder="انچ">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="bottom">پائینچہ</label>
+                        <input type="text" id="bottom" name="bottom" placeholder="انچ">
+                    </div>
+                    <div class="form-group">
+                        <label for="pantType">شلوار</label>
+                        <select id="pantType" name="pantType">
+                            <option value="زِپ والی">زِپ والی</option>
+                            <option value="بغیر زِپ">بغیر زِپ</option>
+                            <option value="پٹی والی">پٹی والی</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="threadCount">تعداد سوت</label>
+                        <input type="number" id="threadCount" name="threadCount" value="0" min="0">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2>اضافی آپشنز</h2>
+                <div class="form-row">
+                    <div class="checkbox-group">
+                        <input type="radio" name="pocketType" id="onePleatPocket">
+                        <label for="onePleatPocket">کوي لھین</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="radio" name="pocketType" id="onePleatPocket">
+                        <label for="onePleatPocket">بغل جیب 1</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="radio" name="pocketType" id="twoPleatPocket">
+                        <label for="twoPleatPocket">بغل جیب 2</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="checkbox-group">
+                        <input type="radio" name="pocketType" id="onePleatPocket">
+                        <label for="onePleatPocket">کوي لھین</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="radio" name="buttonType" id="roundgala">
+                        <label for="roundgala">گول گلا</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="radio" name="buttonType" id="roundCollar">
+                        <label for="roundCollar">ھاف بین</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="radio" name="buttonType" id="halfBean">
+                        <label for="halfBean">بین</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="radio" name="buttonType" id="halfBean">
+                        <label for="halfBean">گول بین</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="checkbox-group">
+                        <input type="radio" name="pocketType" id="onePleatPocket">
+                        <label for="onePleatPocket">کوي لھین</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="radio" name="hemType" id="roundHem">
+                        <label for="roundHem">گول دامن</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="radio" name="hemType" id="straightHem">
+                        <label for="straightHem">سیدھا دامن</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="radio" name="hemType" id="kardaHem">
+                        <label for="kardaHem">کردہ دامن</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2>ادائیگی کی تفصیلات</h2>
+                <div class="total-section">
+                    <div class="total-row">
+                        <span class="total-label">سلائی قیمت:</span>
+                        <span><input type="number" class="price-input" id="sewingPrice" name="sewingPrice" value="1500" onchange="updateTotal()"> روپے</span>
+                    </div>
+                    <div class="total-row">
+                        <span class="total-label">گڑھا قیمت:</span>
+                        <span><input type="number" class="price-input" id="ditchPrice" name="ditchPrice" value="0" onchange="updateTotal()"> روپے</span>
+                    </div>
+                    <div class="total-row">
+                        <span class="total-label">قمیض سلائی:</span>
+                        <span><input type="number" class="price-input" id="shirtPrice" name="shirtPrice" value="0" onchange="updateTotal()"> روپے</span>
+                    </div>
+                    <div class="total-row">
+                        <span class="total-label">شلوار قیمت:</span>
+                        <span><input type="number" class="price-input" id="pantPrice" name="pantPrice" value="0" onchange="updateTotal()"> روپے</span>
+                    </div>
+                    <div class="total-row">
+                        <span class="total-label">بشی قیمت:</span>
+                        <span><input type="number" class="price-input" id="bushiPrice" name="bushiPrice" value="0" onchange="updateTotal()"> روپے</span>
+                    </div>
+                    <div class="total-row">
+                        <span class="total-label">اضافی قیمت:</span>
+                        <span><input type="number" class="price-input" id="extraPrice" name="extraPrice" value="0" onchange="updateTotal()"> روپے</span>
+                    </div>
+                    <div class="total-row" style="font-weight: bold; font-size: 1.1em; border-top: 2px solid var(--primary-color); padding-top: 10px;">
+                        <span class="total-label">کل قیمت:</span>
+                        <span><input type="tel" id="totalPriceInput" name="totalPrice" value="1500" class="total-input" onchange="updateRemaining()" readonly> روپے</span>
+                    </div>
+                    <div class="total-row">
+                        <span class="total-label">جمع:</span>
+                        <span><input type="number" class="price-input" id="paidAmount" name="paidAmount" value="0" onchange="updateRemaining()"> روپے</span>
+                    </div>
+                    <div class="total-row" style="color: var(--danger-color); font-weight: bold; font-size: 1.1em;">
+                        <span class="total-label">بقایا:</span>
+                        <span id="remainingAmount">1500 روپے</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2>ہدایات اور نوٹس</h2>
+                <div class="form-group">
+                    <label for="specialInstructions">خصوصی ہدایات</label>
+                    <textarea id="specialInstructions" name="specialInstructions" rows="3" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"></textarea>
+                </div>
+            </div>
+            
+            <div class="buttons">
+                <button type="button" class="clear-btn" id="clearBtn">صاف کریں</button>
+                <button type="button" class="print-btn" id="printBtn">پرنٹ کریں</button>
+                <button type="button" class="insert-btn" id="saveBtn">محفوظ کریں</button>
+                <button type="button" class="delete-btn" id="deleteBtn">حذف کریں</button>
+                <button type="button" class="exit-btn" id="exitBtn">بند کریں</button>
+            </div>
+        </form>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
